@@ -81,4 +81,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="Valider" />
+
+    <TextView
+        android:id="@+id/QuestionTextView "
+        android:layout_width="270dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhotoQuizz"
+        tools:text="Question" />
 </androidx.constraintlayout.widget.ConstraintLayout>
