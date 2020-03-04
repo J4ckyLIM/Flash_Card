@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/QuestionImageView"
+        android:layout_width="408dp"
+        android:layout_height="185dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SuiviTextView"
+        app:layout_constraintVertical_bias="0.022"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/SuiviTextView"
+        android:layout_width="414dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="      Suivi de question" />
+
+    <TextView
+        android:id="@+id/Question1TextView"
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Question2TextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QuestionImageView"
+        app:layout_constraintVertical_bias="0.65999997"
+        tools:text="Question A" />
+
+    <TextView
+        android:id="@+id/Question2TextView"
+        android:layout_width="88dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toTopOf="@+id/Question3TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question1TextView"
+        tools:text="Question B" />
+
+    <TextView
+        android:id="@+id/Question3TextView"
+        android:layout_width="92dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/RepTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question2TextView"
+        tools:text="Question C" />
+
+    <Button
+        android:id="@+id/Validatebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RepTextView"
+        tools:text="Valider" />
+
+    <TextView
+        android:id="@+id/RepTextView"
+        android:layout_width="391dp"
+        android:layout_height="74dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Question3TextView"
+        tools:text="                Rep" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
