@@ -36,19 +36,28 @@ public class GameActivity extends AppCompatActivity {
         Question.setImageResource(card.image);
 
         TextView  Quizz = findViewById(R.id.QuestionTextView);
+        Quizz.setText(card.question);
 
         RadioButton numero_1 = findViewById(R.id.Reponse1);
+        numero_1.setText(card.reponse1);
 
         RadioButton numero_2 = findViewById(R.id.Reponse2);
+        numero_2.setText(card.reponse2);
+
 
         RadioButton numero_3 = findViewById(R.id.Reponse3);
+        numero_3.setText(card.reponse3);
+
+        final TextView Reponse = findViewById(R.id.RepTextView);
+
 
         Button validate = findViewById(R.id.ValidateButton);
         validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
              Intent ValIntent = new Intent(GameActivity.this, GameActivity.class);
-             ValIntent.putExtra("aRep" , card.reponse);
+             Reponse.setText(card.reponse);
+
 
 
                 //finish
