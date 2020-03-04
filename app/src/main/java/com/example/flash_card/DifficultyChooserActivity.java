@@ -2,12 +2,14 @@ package com.example.flash_card;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 public class DifficultyChooserActivity extends AppCompatActivity {
 
@@ -31,7 +33,14 @@ public class DifficultyChooserActivity extends AppCompatActivity {
 
         getWindow().setAttributes(params);
 
-
+        Button facile = findViewById(R.id.easyRadioButton);
+        facile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent facile = new Intent(DifficultyChooserActivity.this, GameActivity.class);
+                startActivity(facile);
+            }
+        });
         findViewById(R.id.returnButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
