@@ -10,6 +10,8 @@ public class Quizz implements Parcelable {
     int count;
     int ga;
 
+    public  Quizz(){}
+
     protected Quizz(Parcel in) {
         cards = in.createTypedArrayList(Card.CREATOR);
         count = in.readInt();
