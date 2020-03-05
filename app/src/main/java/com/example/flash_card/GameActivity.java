@@ -13,6 +13,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 public class GameActivity extends AppCompatActivity {
+
+
     Card card;
     Quizz quizz;
     @Override
@@ -65,8 +67,17 @@ public class GameActivity extends AppCompatActivity {
                if ((quizz.cards.size() == quizz.count)){
                     Log.i("GameActivity", "COUCOU");
                     Intent Resintent = new Intent(GameActivity.this, ResultActivity.class);
+                    Resintent.putExtra("aString", quizz.cards.size());
                     Resintent.putExtra("aResult", quizz.ga);
-                    startActivity(Resintent);
+
+                   try {
+                       Suivie.setText(quizz.count++ + "/" + quizz.cards.size());
+                       Thread.sleep(5000);
+                       startActivity(Resintent);
+
+                   } catch (InterruptedException e) {
+                       e.printStackTrace();
+                   }
 
 
 
