@@ -50,7 +50,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/QuestionTextView "
+        android:id="@+id/QuestionTextView"
         android:layout_width="384dp"
         android:layout_height="27dp"
         android:gravity="center"
@@ -64,16 +64,19 @@
         android:id="@+id/QuestionRadioGroup"
         android:layout_width="410dp"
         android:layout_height="275dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         app:layout_constraintBottom_toTopOf="@+id/RepTextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/QuestionTextView "
-        app:layout_constraintVertical_bias="0.36">
+        app:layout_constraintVertical_bias="0.45">
 
         <RadioButton
             android:id="@+id/Reponse1"
             android:layout_width="match_parent"
-            android:layout_height="73dp"
+            android:layout_height="75dp"
             android:text="RadioButton" />
 
         <RadioButton
