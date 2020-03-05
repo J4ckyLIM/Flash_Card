@@ -14,9 +14,9 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         final Intent intent = getIntent();
-
+        int text = intent.getIntExtra("aString", 0);
         int result = intent.getIntExtra("aResult" , 0);
         TextView resultat = findViewById(R.id.ResultTextView);
-        resultat.setText(""+result);
+        resultat.setText(result + "/" + text);
     }
 }
