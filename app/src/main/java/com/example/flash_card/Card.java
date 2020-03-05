@@ -13,7 +13,13 @@ public class Card implements Parcelable {
     String reponse3;
     String reponse;
 
-    public Card() {
+    public Card(int image, String question, String reponse1, String reponse2, String reponse3, String reponse) {
+        this.image = image;
+        this.question = question;
+        this.reponse1 = reponse1;
+        this.reponse2 = reponse2;
+        this.reponse3 = reponse3;
+        this.reponse = reponse;
     }
 
     protected Card(Parcel in) {
