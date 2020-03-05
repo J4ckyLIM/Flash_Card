@@ -35,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.questionListButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CardListActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
