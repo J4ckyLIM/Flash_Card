@@ -19,7 +19,7 @@ public class SingleCardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_single_card);
 
         Intent srcIntent = getIntent();
-        int image = srcIntent.getIntExtra("image")
+       // int image = srcIntent.getIntExtra("image");
     }
 
 }

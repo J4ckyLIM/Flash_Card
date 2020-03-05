@@ -1,6 +1,7 @@
 package com.example.flash_card;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
@@ -25,7 +26,14 @@ public class GameActivity extends AppCompatActivity {
         card = new Card(R.drawable.hugo, "Qui est ce personnage historique ?", "Hugo", "Anthony", "Hugo-Anthony","Hugo-Anthony" );
         quizz.cards.add(card);
         //quizz.cards.get(0).image
-        //TextView Suivie = findViewById(R.id.SuiviTextView);
+
+        String question = quizz.count + "/" + quizz.cards.size() ;
+
+        final TextView Suivie = findViewById(R.id.SuiviTextView);
+        Suivie.setText(question);
+
+
+
         ImageView Question = findViewById(R.id.PhotoQuizz);
         Question.setImageResource(card.image);
         TextView  Quizz = findViewById(R.id.QuestionTextView);
@@ -44,13 +52,28 @@ public class GameActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int selectedId = radioQuestion.getCheckedRadioButtonId();
                 RadioButton validate = findViewById(selectedId);
+
                 Intent ValIntent = new Intent(GameActivity.this, GameActivity.class);
                 Reponse.setText(card.reponse);
-                if(card.reponse .equals(validate.getText())) {
+
+                Suivie.setText(quizz.count++ + "/" + quizz.cards.size());
+
+                if (card.reponse.equals(validate.getText())) {
                     quizz.ga++;
+                    Log.i("GAME" , ""+quizz.ga);
                 }
-                //finish
-                // startActivity(GameActivity);
+               if ((quizz.cards.size() == quizz.count)){
+                    Log.i("GameActivity", "COUCOU");
+                    Intent Resintent = new Intent(GameActivity.this, ResultActivity.class);
+                    Resintent.putExtra("aResult", quizz.ga);
+                    startActivity(Resintent);
+
+
+
+
+            }
+              //  finish();
+               // startActivity(GameActivity.this);
             }
         });
     }
