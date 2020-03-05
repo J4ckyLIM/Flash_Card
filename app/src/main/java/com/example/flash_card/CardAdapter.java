@@ -45,7 +45,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
     public CardAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_card, parent, false);
-        //Sending new instance of ViewHolder
+        // Sending new instance of ViewHolder
         // One view = one item of the list
         return new ViewHolder(view, onCardListener);
     }
