@@ -64,6 +64,8 @@
         android:id="@+id/QuestionRadioGroup"
         android:layout_width="410dp"
         android:layout_height="275dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
         app:layout_constraintBottom_toTopOf="@+id/RepTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

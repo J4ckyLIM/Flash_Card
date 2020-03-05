@@ -20,6 +20,8 @@ public class CardListActivity extends AppCompatActivity implements CardAdapter.o
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_list);
+        setTitle("Toutes les questions");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         for(int i = 0; i  < 20; i++){
             // Adding fake data (should be data from db or api)
