@@ -6,10 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CardListActivity extends AppCompatActivity implements CardAdapter.onCardListener{
 
@@ -23,8 +21,8 @@ public class CardListActivity extends AppCompatActivity implements CardAdapter.o
 
         for(int i = 0; i  < 20; i++){
             // Adding fake data (should be data from db or api)
-            cards.add(new Card(R.drawable.hugo, "EASY", "ok", "ok", "ok","ok"));
-            cards.add(new Card(R.drawable.papy, "HARD", "ok", "ok", "ok","ok"));
+            cards.add(new Card(R.drawable.hugo, "EASY", "ok", "NON", "peut etre","ok"));
+            cards.add(new Card(R.drawable.papy, "HARD", "ok", "Hum", "MAIS NON","ok"));
         }
 
         adapter = new CardAdapter(cards, this);
@@ -36,10 +34,9 @@ public class CardListActivity extends AppCompatActivity implements CardAdapter.o
 
     @Override
     public void onCardListener(int position) {
-        Log.d("OKBOOMER", "onCardListener: clicked");
-        //cards.get(position);
+        Card card = cards.get(position);
         Intent intent = new Intent(this, SingleCardActivity.class );
-        intent.putExtra("image", "OK BOOMER");
+        intent.putExtra("card", card);
         startActivity(intent);
     }
 }

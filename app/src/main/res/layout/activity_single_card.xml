@@ -6,4 +6,89 @@
     android:layout_height="match_parent"
     tools:context=".SingleCardActivity">
 
+    <ImageView
+        android:id="@+id/photoImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hugo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Quel est le nom de ce personnage historique ?"
+        app:layout_constraintEnd_toEndOf="@+id/photoImageView"
+        app:layout_constraintStart_toStartOf="@+id/photoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/photoImageView" />
+
+    <RadioGroup
+        android:id="@+id/answerRadioGroup"
+        android:layout_width="200dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/answerRadioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            tools:text="REP1" />
+
+        <RadioButton
+            android:id="@+id/answerRadioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            tools:text="REP2" />
+
+        <RadioButton
+            android:id="@+id/answerRadioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            tools:text="REP3" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/goodTextView"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center"
+        android:text="OKMEC"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/answerRadioGroup"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="@+id/answerRadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextView"
+        tools:text="OKMEC" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/answerRadioGroup"
+        app:layout_constraintStart_toStartOf="@+id/answerRadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/answerRadioGroup"
+        tools:text="RESULTAT" />
+
+    <Button
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Retour"
+        app:layout_constraintEnd_toEndOf="@+id/goodTextView"
+        app:layout_constraintStart_toStartOf="@+id/goodTextView"
+        app:layout_constraintTop_toBottomOf="@+id/goodTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
