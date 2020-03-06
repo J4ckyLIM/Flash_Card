@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SingleCardActivity"></activity>
+        <activity android:name=".SingleCardActivity" />
         <activity android:name=".CardListActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".GameActivity" />
+        <activity android:name=".zoomActivity" />
         <activity
             android:name=".DifficultyChooserActivity"
             android:theme="@style/AppTheme.Popup" />

@@ -19,13 +19,13 @@
 
     <ImageView
         android:id="@+id/PhotoQuizz"
-        android:layout_width="407dp"
-        android:layout_height="133dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SuiviTextView"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/hugo" />
 
     <TextView
         android:id="@+id/RepTextView"
@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/QuestionTextView "
+        app:layout_constraintTop_toBottomOf="@+id/QuestionTextView"
         app:layout_constraintVertical_bias="0.45">
 
         <RadioButton
