@@ -1,6 +1,8 @@
 package com.example.flash_card;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -10,10 +12,12 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.github.chrisbanes.photoview.PhotoViewAttacher;
+
 import java.util.ArrayList;
 import java.util.List;
 public class GameActivity extends AppCompatActivity {
-
 
     Card card;
     Quizz quizz;
@@ -21,6 +25,8 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
         quizz = new Quizz();
         quizz.cards = new ArrayList<>();
         quizz.ga = 0;
@@ -36,8 +42,29 @@ public class GameActivity extends AppCompatActivity {
 
 
 
-        ImageView Question = findViewById(R.id.PhotoQuizz);
+        final ImageView Question = findViewById(R.id.PhotoQuizz);
+        Log.i("GAME" , "jsuis au debut");
         Question.setImageResource(card.image);
+        Question.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GameActivity.this , zoomActivity.class);
+                intent.putExtra("aInt" , card.image);
+                startActivity(intent);
+                Log.i("GAME", "jsuis a la fin");
+                //  LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(250, 250);
+                //Question.setLayoutParams(params);
+
+
+                //PhotoViewAttacher photoViewAttacher = new PhotoViewAttacher(Question);
+                //photoViewAttacher.setZoomable(true);
+                //photoViewAttacher.update();
+
+            }
+        });
+
+
+
         TextView  Quizz = findViewById(R.id.QuestionTextView);
         Quizz.setText(card.question);
         RadioButton numero_1 = findViewById(R.id.Reponse1);
@@ -56,13 +83,18 @@ public class GameActivity extends AppCompatActivity {
                 RadioButton validate = findViewById(selectedId);
 
                 Intent ValIntent = new Intent(GameActivity.this, GameActivity.class);
-                Reponse.setText(card.reponse);
 
                 Suivie.setText(quizz.count++ + "/" + quizz.cards.size());
 
                 if (card.reponse.equals(validate.getText())) {
                     quizz.ga++;
+                    Reponse.setText("Bien ouej morray la bonne rep c'est :  " + card.reponse);
+
                     Log.i("GAME" , ""+quizz.ga);
+
+                }
+                else {
+                    Reponse.setText("Dommage Guignol c'etais pas loin la bonne reponse est : "  + card.reponse);
                 }
                if ((quizz.cards.size() == quizz.count)){
                     Log.i("GameActivity", "COUCOU");
@@ -70,14 +102,14 @@ public class GameActivity extends AppCompatActivity {
                     Resintent.putExtra("aString", quizz.cards.size());
                     Resintent.putExtra("aResult", quizz.ga);
 
-                   try {
-                       Suivie.setText(quizz.count++ + "/" + quizz.cards.size());
-                       Thread.sleep(5000);
+                  /* try {
+                     //  Suivie.setText(quizz.count++ + "/" + quizz.cards.size());
+                     //  Thread.sleep(5000);
                        startActivity(Resintent);
 
-                   } catch (InterruptedException e) {
+                   }// catch (InterruptedException e) {
                        e.printStackTrace();
-                   }
+                   }*/
 
 
 
