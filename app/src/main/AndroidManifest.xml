@@ -20,10 +20,6 @@
         <activity android:name=".ResultActivity" />
         <activity android:name=".GameActivity"
             android:parentActivityName=".MainActivity"/>
-        <activity android:name=".SingleCardActivity" />
-        <activity android:name=".CardListActivity" />
-        <activity android:name=".ResultActivity" />
-        <activity android:name=".GameActivity" />
         <activity android:name=".zoomActivity" />
         <activity
             android:name=".DifficultyChooserActivity"
