@@ -6,9 +6,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-
-import com.google.gson.Gson;
 
 
 import org.json.JSONArray;
@@ -17,7 +14,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class CardListActivity extends AppCompatActivity implements CardAdapter.onCardListener{
