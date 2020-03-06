@@ -5,13 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultActivity">
-
     <TextView
         android:id="@+id/ResultTextView"
-        android:layout_width="381dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="387dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="188dp"
         android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="209dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Score"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
