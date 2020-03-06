@@ -4,6 +4,8 @@ import android.media.Image;
 import android.os.Parcelable;
 import android.os.Parcel;
 
+import java.util.Map;
+
 public class Card implements Parcelable {
 
     int image;

@@ -1,0 +1,164 @@
+[
+  {
+    "image": "mandela1.jpeg",
+    "difficulty": "easy",
+    "answers": [
+      {
+        "sentence": "Boubacar Yateboub",
+        "is_right": false
+      },
+      {
+        "sentence": "Nelson Mandela",
+        "is_right": true
+      },
+      {
+        "sentence": "Martin Luther King",
+        "is_right": false
+      }
+    ]
+  },
+  {
+    "image": "gandhi1.jpg",
+    "difficulty": "easy",
+    "answers": [
+      {
+        "sentence": "Gandhi",
+        "is_right": true
+      },
+      {
+        "sentence": "Jacky Nemus",
+        "is_right": false
+      },
+      {
+        "sentence": "Dalai Lama",
+        "is_right": false
+      }
+    ]
+  },
+  {
+    "image": "jeanmou2.jpg",
+    "difficulty": "medium",
+    "answers": [
+      {
+        "sentence": "Jean Moulin",
+        "is_right": true
+      },
+      {
+        "sentence": "Victor Hugo",
+        "is_right": false
+      },
+      {
+        "sentence": "Anatole France",
+        "is_right": false
+      }
+    ]
+  },
+  {
+    "image": "picasso2.jpg",
+    "difficulty": "medium",
+    "answers": [
+      {
+        "sentence": "Auguste Renoir",
+        "is_right": false
+      },
+      {
+        "sentence": "Claude Monet",
+        "is_right": false
+      },
+      {
+        "sentence": "Picasso",
+        "is_right": true
+      }
+    ]
+  },
+  {
+    "image": "jfk2.jpg",
+    "difficulty": "medium",
+    "answers": [
+      {
+        "sentence": "Bill Clinton",
+        "is_right": false
+      },
+      {
+        "sentence": "J.F Kennedy",
+        "is_right": true
+      },
+      {
+        "sentence": "Dwight D. Eisenhower",
+        "is_right": false
+      }
+    ]
+  },
+  {
+    "image": "persee3.jpg",
+    "difficulty": "hard",
+    "answers": [
+      {
+        "sentence": "Persée",
+        "is_right": true
+      },
+      {
+        "sentence": "Achile",
+        "is_right": false
+      },
+      {
+        "sentence": "Hercule",
+        "is_right": false
+      }
+    ]
+  },
+  {
+    "image": "sitting3.jpg",
+    "difficulty": "hard",
+    "answers": [
+      {
+        "sentence": "Crazy Horse",
+        "is_right": false
+      },
+      {
+        "sentence": "Dream Mustang",
+        "is_right": false
+      },
+      {
+        "sentence": "Sitting Bull",
+        "is_right": true
+      }
+    ]
+  },
+  {
+    "image": "totoff3.jpg",
+    "difficulty": "hard",
+    "answers": [
+      {
+        "sentence": "Pape Jean II",
+        "is_right": false
+      },
+      {
+        "sentence": "Christophe Colomb",
+        "is_right": true
+      },
+      {
+        "sentence": "Cardinal Richelieu",
+        "is_right": true
+      }
+    ]
+  },
+  {
+    "image": "lincoln3.jpg",
+    "difficulty": "hard",
+    "answers": [
+      {
+        "sentence": "George Washington",
+        "is_right": false
+      },
+      {
+        "sentence": "Benjamin Franklin",
+        "is_right": false
+      },
+      {
+        "sentence": "Abraham Lincoln",
+        "is_right": true
+      }
+    ]
+  }
+]

@@ -15,6 +15,7 @@ public class SingleCardActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_card);
         ImageView image = findViewById(R.id.photoImageView);
